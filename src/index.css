@@ -1,0 +1,76 @@
+/* index.css - Game of Thrones Global Theme & Reset */
+:root {
+  /* Fonts */
+  --font-display: 'Cinzel', 'Georgia', serif;
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  /* Colors */
+  --bg-dark: #0A0A0C;          /* Obsidian Black / Dragonstone Hearth */
+  --bg-card: #121318;          /* Keep Stone / Castillon Dark */
+  --bg-hover: #181A22;         /* Forged Iron / Shield Polish */
+  
+  --color-gold: #D4AF37;       /* Lannister Gold */
+  --color-gold-dim: rgba(212, 175, 55, 0.08);
+  --color-gold-border: rgba(212, 175, 55, 0.2);
+  --color-gold-hover: rgba(212, 175, 55, 0.4);
+  --color-silver: #7EA8BE;     /* Stark Ice Blue / Silver Steel */
+  --color-silver-dim: rgba(126, 168, 190, 0.1);
+  --color-silver-border: rgba(126, 168, 190, 0.25);
+  --text-primary: #F2EFE9;     /* Weathered Parchment / Off-white */
+  --text-secondary: #A39E93;   /* Aged Stone Grey / Ash */
+  --text-muted: #6E6A62;       /* Shadow Charcoal */
+  
+  --border-gold: 1px solid rgba(212, 175, 55, 0.15);
+  --border-gold-hover: 1px solid rgba(212, 175, 55, 0.35);
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+/* Global resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-dark);
+}
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+/* Custom Medieval Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-border);
+  border: 2px solid var(--bg-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-hover);
+}
+::selection {
+  background: rgba(212, 175, 55, 0.25);
+  color: var(--text-primary);
+}
+/* Base typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
